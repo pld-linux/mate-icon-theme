@@ -28,9 +28,9 @@ Development files for mate-icon-theme
 
 %prep
 %setup -q
-NOCONFIGURE=1 ./autogen.sh
 
 %build
+NOCONFIGURE=1 ./autogen.sh
 %configure \
 	--enable-icon-mapping \
 	--disable-static
