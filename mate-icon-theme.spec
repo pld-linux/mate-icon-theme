@@ -12,7 +12,6 @@ BuildRequires:	mate-common
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	gtk-update-icon-cache
-Provides:	mate-icon-theme = %{version}-%{release}
 Obsoletes:	mate-icon-theme-legacy < 1.5.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
