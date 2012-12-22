@@ -7,7 +7,7 @@ Group:		Themes
 URL:		http://mate-desktop.org/
 Source0:	http://pub.mate-desktop.org/releases/1.5/%{name}-%{version}.tar.xz
 # Source0-md5:	6ae1369e21371f7517e4523750443df9
-BuildRequires:	icon-naming-utils
+BuildRequires:	icon-naming-utils >= 0.8.7
 BuildRequires:	mate-common
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
