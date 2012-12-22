@@ -40,6 +40,7 @@ NOCONFIGURE=1 ./autogen.sh
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
+	install_sh="install -p" \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
