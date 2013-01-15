@@ -43,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 	install_sh="install -p" \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_datadir}/icons/mate/scalable/status
 > $RPM_BUILD_ROOT%{_iconsdir}/mate/icon-theme.cache
 
 %clean
@@ -61,6 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/mate/index.theme
 %{_iconsdir}/mate/[0-9]*x*
 %ghost %{_iconsdir}/mate/icon-theme.cache
+%dir %{_iconsdir}/mate/scalable
+%dir %{_iconsdir}/mate/scalable/status
 
 %files devel
 %defattr(644,root,root,755)
