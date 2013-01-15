@@ -1,7 +1,7 @@
 Summary:	Icon theme for MATE Desktop
 Name:		mate-icon-theme
 Version:	1.5.0
-Release:	1
+Release:	2
 License:	GPL v2+ and LGPL v2+
 Group:		Themes
 Source0:	http://pub.mate-desktop.org/releases/1.5/%{name}-%{version}.tar.xz
@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 	install_sh="install -p" \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_datadir}/icons/mate/scalable/status
+install -d $RPM_BUILD_ROOT%{_datadir}/icons/mate/scalable/{actions,apps,status}
 > $RPM_BUILD_ROOT%{_iconsdir}/mate/icon-theme.cache
 
 %clean
@@ -63,6 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/mate/[0-9]*x*
 %ghost %{_iconsdir}/mate/icon-theme.cache
 %dir %{_iconsdir}/mate/scalable
+%dir %{_iconsdir}/mate/scalable/actions
+%dir %{_iconsdir}/mate/scalable/apps
 %dir %{_iconsdir}/mate/scalable/status
 
 %files devel
