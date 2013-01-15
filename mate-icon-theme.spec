@@ -2,12 +2,13 @@ Summary:	Icon theme for MATE Desktop
 Name:		mate-icon-theme
 Version:	1.5.0
 Release:	1
-License:	GPLv2+ and LGPLv2+
+License:	GPL v2+ and LGPL v2+
 Group:		Themes
 Source0:	http://pub.mate-desktop.org/releases/1.5/%{name}-%{version}.tar.xz
 # Source0-md5:	6ae1369e21371f7517e4523750443df9
+URL:		http://wiki.mate-desktop.org/mate-icon-theme
 BuildRequires:	icon-naming-utils >= 0.8.7
-URL:		http://mate-desktop.org/
+BuildRequires:	intltool >= 0.40.0
 BuildRequires:	mate-common
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -24,7 +25,7 @@ Summary:	Development files for mate-icon-theme
 Group:		Development/Libraries
 
 %description devel
-Development files for mate-icon-theme
+Development files for mate-icon-theme.
 
 %prep
 %setup -q
