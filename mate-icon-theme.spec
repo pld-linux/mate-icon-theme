@@ -1,7 +1,7 @@
 Summary:	Icon theme for MATE Desktop
 Name:		mate-icon-theme
 Version:	1.5.1
-Release:	1
+Release:	2
 License:	GPL v2+ and LGPL v2+
 Group:		Themes
 Source0:	http://pub.mate-desktop.org/releases/1.5/%{name}-%{version}.tar.xz
@@ -23,6 +23,7 @@ Icon theme for MATE Desktop.
 %package -n make-icon-theme-menta
 Summary:	Menta Icon theme for MATE Desktop
 Group:		Themes
+Requires:	%{name} = %{version}-%{release}
 
 %description -n make-icon-theme-menta
 Menta Icon theme for MATE Desktop.
