@@ -1,11 +1,11 @@
 Summary:	Icon theme for MATE Desktop
 Name:		mate-icon-theme
-Version:	1.6.0
+Version:	1.6.1
 Release:	1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes
 Source0:	http://pub.mate-desktop.org/releases/1.6/%{name}-%{version}.tar.xz
-# Source0-md5:	4448267286bce6d02e9b37d0979bc057
+# Source0-md5:	6dfe141cec1e2727f36314657c7ad0ae
 URL:		http://wiki.mate-desktop.org/mate-icon-theme
 BuildRequires:	icon-naming-utils >= 0.8.7
 BuildRequires:	intltool >= 0.40.0
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Icon theme for MATE Desktop.
 
-%package -n make-icon-theme-menta
+%package menta
 Summary:	Menta Icon theme for MATE Desktop
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 
-%description -n make-icon-theme-menta
+%description menta
 Menta Icon theme for MATE Desktop.
 
 %package devel
@@ -39,7 +39,6 @@ Development files for mate-icon-theme.
 %setup -q
 
 %build
-NOCONFIGURE=1 ./autogen.sh
 %configure \
 	--disable-silent-rules \
 	--enable-icon-mapping
@@ -64,10 +63,10 @@ rm -rf $RPM_BUILD_ROOT
 %postun
 %update_icon_cache mate
 
-%post -n make-icon-theme-menta
+%post menta
 %update_icon_cache menta
 
-%postun -n make-icon-theme-menta
+%postun menta
 %update_icon_cache menta
 
 %files
@@ -82,11 +81,13 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_iconsdir}/mate/scalable/apps
 %dir %{_iconsdir}/mate/scalable/status
 
-%files -n make-icon-theme-menta
+%files menta
 %defattr(644,root,root,755)
 %dir %{_iconsdir}/menta
 %{_iconsdir}/menta/[0-9]*x*
+%{_iconsdir}/menta/scalable
 %{_iconsdir}/menta/index.theme
+%ghost %{_iconsdir}/menta/icon-theme.cache
 
 %files devel
 %defattr(644,root,root,755)
