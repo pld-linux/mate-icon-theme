@@ -1,11 +1,11 @@
 Summary:	Icon theme for MATE Desktop
 Name:		mate-icon-theme
-Version:	1.6.1
+Version:	1.6.2
 Release:	1
 License:	GPL v2+ and LGPL v2+
 Group:		Themes
 Source0:	http://pub.mate-desktop.org/releases/1.6/%{name}-%{version}.tar.xz
-# Source0-md5:	6dfe141cec1e2727f36314657c7ad0ae
+# Source0-md5:	7130d2554600bfd22bb8fa1f73fd5a2c
 URL:		http://wiki.mate-desktop.org/mate-icon-theme
 BuildRequires:	icon-naming-utils >= 0.8.7
 BuildRequires:	intltool >= 0.40.0
@@ -76,10 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/mate/index.theme
 %{_iconsdir}/mate/[0-9]*x*
 %ghost %{_iconsdir}/mate/icon-theme.cache
-%dir %{_iconsdir}/mate/scalable
-%dir %{_iconsdir}/mate/scalable/actions
-%dir %{_iconsdir}/mate/scalable/apps
-%dir %{_iconsdir}/mate/scalable/status
+%{_iconsdir}/mate/scalable
 
 %files menta
 %defattr(644,root,root,755)
