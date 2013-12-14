@@ -1,8 +1,9 @@
 Summary:	Icon theme for MATE Desktop
+Summary(pl.UTF-8):	Motyw ikon dla środowiska MATE Desktop
 Name:		mate-icon-theme
 Version:	1.6.2
 Release:	2
-License:	GPL v2+ and LGPL v2+
+License:	LGPL v3 or CC-BY-SA v3.0
 Group:		Themes
 Source0:	http://pub.mate-desktop.org/releases/1.6/%{name}-%{version}.tar.xz
 # Source0-md5:	7130d2554600bfd22bb8fa1f73fd5a2c
@@ -20,8 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Icon theme for MATE Desktop.
 
+%description -l pl.UTF-8
+Motyw ikon dla środowiska MATE Desktop.
+
 %package menta
 Summary:	Menta Icon theme for MATE Desktop
+Summary(pl.UTF-8):	Motyw ikon Menta dla środowiska MATE Desktop
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 Provides:	make-icon-theme-menta = 1.6.0-2
@@ -30,12 +35,20 @@ Obsoletes:	make-icon-theme-menta
 %description menta
 Menta Icon theme for MATE Desktop.
 
+%description menta -l pl.UTF-8
+Motyw ikon Menta dla środowiska MATE Desktop.
+
 %package devel
 Summary:	Development files for mate-icon-theme
-Group:		Development/Libraries
+Summary(pl.UTF-8):	Pliki programistyczne mate-icon-theme
+Group:		Development
 
 %description devel
 Development files for mate-icon-theme.
+
+%description devel -l pl.UTF-8
+Pliki programistyczne mate-icon-theme.
+
 
 %prep
 %setup -q
@@ -73,19 +86,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README
+%doc AUTHORS COPYING ChangeLog README TODO
 %dir %{_iconsdir}/mate
 %{_iconsdir}/mate/index.theme
-%{_iconsdir}/mate/[0-9]*x*
-%ghost %{_iconsdir}/mate/icon-theme.cache
+%{_iconsdir}/mate/[0-9]*x[0-9]*
 %{_iconsdir}/mate/scalable
+%ghost %{_iconsdir}/mate/icon-theme.cache
 
 %files menta
 %defattr(644,root,root,755)
 %dir %{_iconsdir}/menta
-%{_iconsdir}/menta/[0-9]*x*
-%{_iconsdir}/menta/scalable
 %{_iconsdir}/menta/index.theme
+%{_iconsdir}/menta/[0-9]*x[0-9]*
+%{_iconsdir}/menta/scalable
 %ghost %{_iconsdir}/menta/icon-theme.cache
 
 %files devel
