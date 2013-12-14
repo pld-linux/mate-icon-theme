@@ -2,7 +2,7 @@ Summary:	Icon theme for MATE Desktop
 Summary(pl.UTF-8):	Motyw ikon dla środowiska MATE Desktop
 Name:		mate-icon-theme
 Version:	1.6.2
-Release:	2
+Release:	3
 License:	LGPL v3 or CC-BY-SA v3.0
 Group:		Themes
 Source0:	http://pub.mate-desktop.org/releases/1.6/%{name}-%{version}.tar.xz
