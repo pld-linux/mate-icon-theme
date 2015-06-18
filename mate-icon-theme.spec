@@ -97,6 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/mate/index.theme
 %{_iconsdir}/mate/[0-9]*x[0-9]*
 %{_iconsdir}/mate/scalable
+%{_iconsdir}/mate/scalable-up-to-32
 %ghost %{_iconsdir}/mate/icon-theme.cache
 
 %files menta
