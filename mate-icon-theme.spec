@@ -17,6 +17,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	gtk-update-icon-cache
+Obsoletes:	mate-icon-theme-devel < 1.12.0
 Obsoletes:	mate-icon-theme-legacy < 1.5.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
