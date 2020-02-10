@@ -1,0 +1,31 @@
+From a943b0b04362bcda9bb3ab29c01bc19a229545b9 Mon Sep 17 00:00:00 2001
+From: Jan Palus <atler@pld-linux.org>
+Date: Mon, 10 Feb 2020 18:54:06 +0100
+Subject: [PATCH] build: do not invoke AM_GNU_GETTEXT
+
+mate-icon-theme does not link with anything, the only desired side
+effect of AM_GNU_GETTEXT is AM_PO_SUBDIRS invocation. It fixes packages
+built specifically without any arch specific pieces and therefore with
+potentially unknown triplet like noarch-pld-linux.
+
+Signed-off-by: Jan Palus <atler@pld-linux.org>
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 52628cf..fb79661 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -11,7 +11,7 @@ PKG_PROG_PKG_CONFIG([0.19])
+ 
+ AM_GNU_GETTEXT_VERSION([0.19.8])
+ AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+-AM_GNU_GETTEXT([external])
++AM_PO_SUBDIRS
+ 
+ GETTEXT_PACKAGE="${PACKAGE}"
+ AC_SUBST(GETTEXT_PACKAGE)
+-- 
+2.25.0
+
