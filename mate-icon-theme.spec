@@ -7,8 +7,8 @@ License:	LGPL v3 or CC-BY-SA v3.0
 Group:		Themes
 Source0:	https://pub.mate-desktop.org/releases/1.26/%{name}-%{version}.tar.xz
 # Source0-md5:	14728745c70f91b2a963729effa61e20
-URL:		http://wiki.mate-desktop.org/mate-icon-theme
 Patch0:		noarch-build.patch
+URL:		https://github.com/mate-desktop/mate-icon-theme
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-tools >= 0.19.8
