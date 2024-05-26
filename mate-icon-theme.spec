@@ -1,15 +1,15 @@
 Summary:	Icon theme for MATE Desktop
 Summary(pl.UTF-8):	Motyw ikon dla środowiska MATE Desktop
 Name:		mate-icon-theme
-Version:	1.26.0
+Version:	1.28.0
 Release:	1
 License:	LGPL v3 or CC-BY-SA v3.0
 Group:		Themes
-Source0:	https://pub.mate-desktop.org/releases/1.26/%{name}-%{version}.tar.xz
-# Source0-md5:	14728745c70f91b2a963729effa61e20
+Source0:	https://pub.mate-desktop.org/releases/1.28/%{name}-%{version}.tar.xz
+# Source0-md5:	38ddac962260a47bccdd5a377a07c6f8
 Patch0:		noarch-build.patch
 URL:		https://github.com/mate-desktop/mate-icon-theme
-BuildRequires:	autoconf >= 2.53
+BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-tools >= 0.19.8
 BuildRequires:	icon-naming-utils >= 0.8.7
@@ -35,7 +35,7 @@ Summary(pl.UTF-8):	Motyw ikon Menta dla środowiska MATE Desktop
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 Provides:	make-icon-theme-menta = 1.6.0-2
-Obsoletes:	make-icon-theme-menta
+Obsoletes:	make-icon-theme-menta < 1.6.1
 
 %description menta
 Menta Icon theme for MATE Desktop.
