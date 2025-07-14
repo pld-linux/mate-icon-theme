@@ -45,7 +45,7 @@ Motyw ikon Menta dla środowiska MATE Desktop.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
